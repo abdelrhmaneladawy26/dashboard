@@ -37,7 +37,7 @@ body{
 }
 .navigation ul li{
     position: relative;
-    width: 200%;
+    width: 100%;
     text-transform: capitalize;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -78,4 +78,28 @@ body{
     line-height: 60px;
     text-align: start;
     white-space:nowrap;
+}
+.navigation ul li:hover a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50px;
+    box-shadow: 35px 35px 0 10px var(--white); 
+    pointer-events: none;
+}
+.navigation ul li:hover a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50px;
+    box-shadow: 35px -35px 0 10px var(--white); 
+    pointer-events: none;
 }
