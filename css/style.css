@@ -322,3 +322,49 @@ body{
 .status.return{
     background:#f00;
 }
+.recentCustomers{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
+}
+.recentCustomers .imgBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.recentCustomers .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recentCustomers table tr td{
+    padding: 12px 10px;
+    border-radius: 10px;
+}
+.recentCustomers table tr td h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+.recentCustomers table tr td h4 span{
+    font-size: 14px;
+    color: var(--black2);
+}
+.recentCustomers table tr:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+.recentCustomers table tr:hover td h4 span{
+    color: var(--white);
+}
