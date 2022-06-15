@@ -4,6 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: sans-serif;
 }
 :root{
      --green:#1aca95;
@@ -230,4 +231,94 @@ body{
 .cardBox .card:hover .iconBox
 {
     color: var(--white);
+}
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+.details .recentOrders{
+    position: relative;
+    width: 100%;
+    display: grid;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2{
+    font-weight: 600;
+    color: var(--green);
+}
+.btn{
+    position: relative;
+    padding:  10px;
+    background: var(--green);
+    border-radius: 5px;
+    color: var(--white);
+}
+.details .table{
+    width: 100%;
+    border-collapse:collapse;
+    margin-top: 10px;
+     
+}
+.details .table thead td{
+    font-weight: 600;
+}
+.details .recentOrders table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+.details .recentOrders table tr:last-child
+{
+    border: none;
+}
+.details .recentOrders table tbody tr:hover{
+    background: var(--green);
+    color: var(--white);
+}
+.details .recentOrders table tr td
+{
+    padding: 10px;
+}
+.details .recentOrders table tr td:last-child
+{
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2)
+{
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3){
+    text-align: center;
+}
+.status.delivered
+,.status.pending
+,.status.return
+{
+    padding:  4px;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.delivered{
+     background:#1a98ca;
+}
+.status.pending{
+    background:#f9ca3f;
+}
+.status.return{
+    background:#f00;
 }
