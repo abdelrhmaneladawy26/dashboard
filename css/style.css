@@ -413,14 +413,13 @@ body{
         z-index: 10000;
     }
     .navigation.active{
-        width: 100%;
+        width:100%;
         left: 0;
     }
     .toggle{
-        z-index: 10002;
+        z-index: 10001;
     }
     .main.active .toggle{
-        position: fixed;
         right: 0;
         left: initial;
         color: var(--white);
