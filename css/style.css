@@ -120,7 +120,7 @@ body{
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
-    min-height: 100vh;
+    min-height:100vh;
     background: var(--white);
     transition: .5s;
 }
@@ -329,7 +329,7 @@ body{
     padding: 20px;
     background: var(--white);
     border-radius: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.8);
 }
 .recentCustomers .imgBox{
     position: relative;
@@ -367,4 +367,62 @@ body{
 }
 .recentCustomers table tr:hover td h4 span{
     color: var(--white);
+}
+
+/* responsive media design*/
+@media(max-width:991px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns:repeat(2,1fr);   
+    }
+}
+@media(max-width:768px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .status.inprogress{
+        white-space: nowrap;
+    }
+}
+@media(max-width:480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-size: 20px;
+    }
+    .user{
+        min-width: 40px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 10000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle{
+        z-index: 10002;
+    }
+    .main.active .toggle{
+        position: fixed;
+        right: 0;
+        left: initial;
+        color: var(--white);
+    }
 }
